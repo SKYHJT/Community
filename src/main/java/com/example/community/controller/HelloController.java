@@ -3,7 +3,6 @@ package com.example.community.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @ClassName HelloController
@@ -16,10 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HelloController {
 
-    @GetMapping("/hello")
-    public String sayHello(Model model) {
-        model.addAttribute("name", "琪琪");
-        //相当于访问 /templates/hello.html
-        return "hello";
+    @GetMapping("/")
+    public String index() {
+        return "index";
     }
 }
