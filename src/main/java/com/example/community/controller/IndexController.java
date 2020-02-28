@@ -50,10 +50,10 @@ public class IndexController {
                 }
             }
         }
-//        PaginationDTO paginationDTO = questionService.list(page,size);
-//        model.addAttribute("paginationDTO",paginationDTO);
-        List<QuestionDTO> questionDTOList = questionService.list();
-        model.addAttribute("questions",questionDTOList);
+        PaginationDTO paginationDTO = questionService.list(page,size);
+        model.addAttribute("paginationDTO",paginationDTO);
+//        List<QuestionDTO> questionDTOList = questionService.list();
+//        model.addAttribute("questions",questionDTOList);
         return "index";
     }
 }
